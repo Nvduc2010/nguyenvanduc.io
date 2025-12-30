@@ -27,7 +27,27 @@
     <!-- Styles -->
     <link href="assets/css/plugins.min.css" rel="stylesheet">
     <link href="assets/css/style.min.css" rel="stylesheet">
-
+    <style>
+        /* Contact hamburger and menu */
+        .contact-wrapper{position:relative;display:inline-block}
+        .contact-toggle{background:transparent;border:0;cursor:pointer;padding:6px 10px;display:inline-flex;align-items:center;gap:8px;color:#222;font-weight:700}
+        .contact-label{font-size:14px;line-height:1;color:#222}
+        .contact-toggle .hamburger{display:inline-block;width:22px;height:16px;position:relative}
+        .contact-toggle .hamburger span{display:block;height:2px;background:#222;margin:4px 0;border-radius:2px}
+        .contact-menu{position:absolute;right:0;top:40px;min-width:160px;background:#fff;border-radius:4px;box-shadow:0 6px 18px rgba(0,0,0,.12);display:none;z-index:999}
+        .contact-menu.show{display:block}
+        .contact-menu a{display:block;padding:10px 12px;color:#222;text-decoration:none;border-bottom:1px solid rgba(0,0,0,.04)}
+        .contact-menu .icon{width:18px;height:18px;display:inline-block;vertical-align:middle;margin-right:8px}
+        .contact-menu svg{width:18px;height:18px;vertical-align:middle;margin-right:8px}
+        .contact-menu a:last-child{border-bottom:0}
+        .contact-menu a:hover{background:#f5f5f5}
+        @media (max-width:520px){.contact-menu{right:-10px}}
+        /* Skills */
+        .skill{margin-bottom:14px}
+        .skill .progress{background:#eee;height:10px;border-radius:6px;overflow:hidden}
+        .skill .progress-bar{height:10px;background:#2EA3E7;border-radius:6px}
+        .skill strong{display:block;margin-bottom:6px}
+    </style>
     <!-- Modernizer -->
     <script type="text/javascript" src="assets/js/vendor/modernizr-3.3.1.min.js"></script>
 
@@ -59,18 +79,38 @@
                         <div id="crt-head-col2" class="crt-head-col text-right">
                             <div class="crt-nav-container crt-container hidden-sm hidden-xs">
                                 <nav id="crt-main-nav">
-
                                     <ul class="clear-list">
-                                        <li><a href="https://forms.gle/Dg6uPVxqGqWkA93E6">Đánh Giá</a></li>
+                                        <li class="contact-wrapper">
+                                            <button id="contactToggle" class="contact-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Open contact menu">
+                                                <span class="contact-label">Liên Hệ Ngay</span>
+                                            </button>
+                                            <div id="contactMenu" class="contact-menu" role="menu" aria-hidden="true">
+                                                <a href="https://zalo.me/84384414936" target="_blank" role="menuitem">
+                                                    <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                                        <circle cx="12" cy="12" r="10" fill="#2EA3E7"/>
+                                                        <path d="M7 8h10l-2 4 2 4H7l2-4-2-4z" fill="#fff"/>
+                                                    </svg>
+                                                    Zalo
+                                                </a>
+                                                <a href="mailto:ducyen19112003@gmail.com" role="menuitem">
+                                                    <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                                        <path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6z" fill="#D14836"/>
+                                                        <path d="M4 7.5L12 13l8-5.5" fill="#fff"/>
+                                                    </svg>
+                                                    Gmail
+                                                </a>
+                                                <a href="https://web.facebook.com/profile.php?id=100055516309608" target="_blank" role="menuitem">
+                                                    <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                                        <circle cx="12" cy="12" r="10" fill="#1877F2"/>
+                                                        <path d="M13.5 12.5h1.8l.2-2.1h-2v-1.3c0-.6.2-1 .9-1h1v-1.9c-.2 0-.9-.1-1.9-.1-2.1 0-3.6 1.3-3.6 3.6v1.6h-1.9V12.5h1.9V20h2.2v-7.5z" fill="#fff"/>
+                                                    </svg>
+                                                    Facebook
+                                                </a>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
-                        </div>
-
-                        <div id="crt-head-col3" class="crt-head-col text-right">
-                            <button id="crt-sidebar-btn" class="btn btn-icon btn-shade">
-                                <span class="crt-icon crt-icon-side-bar-icon"></span>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -96,15 +136,12 @@
                                 <p class="text-muted">Live for tomorrow <a><span class="crt-icon crt-icon-firefox"></span></a></p>
                                 <ul class="crt-social clear-list">
                                     <li><a href="https://web.facebook.com/profile.php?id=100055516309608" target="_blank"><span class="crt-icon crt-icon-facebook"></span></a></li>
-                                    <li><a href="https://x.com/nvduc2010"><span class="crt-icon crt-icon-twitter"></span></a></li>
-                                    <li><a href="https://www.instagram.com/daoductrong09091995/"><span class="crt-icon crt-icon-instagram"></span></a></li>
-                                    <li><a href="https://www.youtube.com/@NVDuck2010"><span class="crt-icon crt-icon-youtube"></span></a></li>
                                     <li><a href="https://github.com/Nvduc2010"><span class="crt-icon crt-icon-github"></span></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="crt-side-box-btn">
-                            <a class="btn btn-default btn-lg btn-block btn-thin btn-upper" href="assets/images/uploads/avatar/cv_image.png">Full Screen</a>
+                            <a class="btn btn-default btn-lg btn-block btn-thin btn-upper" href="assets/images/uploads/avatar/fullscreen.png">Full Screen</a>
                         </div>
                     </div>
                     <!-- .crt-side-box-item -->
@@ -125,9 +162,9 @@
                                         <div class="text-box">
                                             <p><b>Xin chào, tôi là Nguyễn Văn Đức</b><br> Tôi là một sinh viên mới tốt
                                                 nghiệp
-                                                ngành Công nghệ Thông tin với niềm đam mê lập trình và sáng tạo. Tôi đã
-                                                hoàn thành chương trình học tại Trường Đại học Công nghệ Quốc
-                                                tế. Ngay từ những năm cấp ba, tôi nhận ra rằng công nghệ là một trong
+                                                ngành Công nghệ Thông tin. Với niềm đam mê lập trình và sáng tạo, tôi đã
+                                                hoàn thành chương trình học tại Trường Đại học Công nghệ TP.HCM (HUTECH).
+                                                Ngay từ những năm cấp ba, tôi nhận ra rằng công nghệ là một trong
                                                 những công cụ mạnh mẽ nhất, định hình cách chúng ta sống và làm việc.
                                                 <br>Tôi bị cuốn hút bởi sự logic và tính sáng tạo trong lập trình, điều
                                                 đó đã thúc đẩy tôi khám phá sâu hơn về phát triển phần mềm và trí tuệ
@@ -154,7 +191,7 @@
                                             <dd>20/10/2003</dd>
 
                                             <dt class="text-upper">address</dt>
-                                            <dd>Đ.244, Tăng Nhơn Phú A, Quận 9, TP.HCM
+                                            <dd>Vinhome Grand Park, Quận 9, TP.HCM.
                                             </dd>
 
                                             <dt class="text-upper">e-mail</dt>
@@ -166,15 +203,12 @@
 
                                             <dt class="text-upper">phone</dt>
                                             <dd>+84 0384414936</dd>
-
-                                            <dt class="text-upper">freelance</dt>
-                                            <dd>Available</dd>
                                         </dl>
                                     </div>
                                     <!-- .col-sm-6 -->
 
                                     <div class="col-sm-6 clear-mrg">
-                                        <h2 class="title-thin text-muted">languages</h2>
+                                        <h2 class="title-thin text-muted">Languages</h2>
 
                                         <div class="progress-bullets crt-animate" role="progressbar" aria-valuenow="10"
                                             aria-valuemin="0" aria-valuemax="10">
@@ -187,48 +221,18 @@
                                                 <span class="bullet fill"></span>
                                                 <span class="bullet fill"></span>
                                                 <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
+                                                <span class="bullet "></span>
+                                                <span class="bullet "></span>
+                                                <span class="bullet "></span>
                                             </span>
                                             <span class="progress-text text-muted">native</span>
                                         </div>
 
-                                        <div class="progress-bullets crt-animate" role="progressbar" aria-valuenow="8"
-                                            aria-valuemin="0" aria-valuemax="10">
-                                            <strong class="progress-title">Chinese</strong>
-                                            <span class="progress-bar">
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet"></span>
-                                                <span class="bullet"></span>
-                                            </span>
-                                            <span class="progress-text text-muted">intermediate</span>
-                                        </div>
+                                        <h2 class="title-thin text-muted mt-30">Skills</h2>
+                                        <div class="skill crt-animate" role="progressbar" aria-valuenow="90"
+                                            aria-valuemin="0" aria-valuemax="100">
+                                            <p>Sử dụng github, các công cụ tin học văn phòng tốt, ngôn ngữ lập trình đa dạng(NodeJS,Python,PHP,Java..)</p>
 
-                                        <div class="progress-bullets crt-animate" role="progressbar" aria-valuenow="7"
-                                            aria-valuemin="0" aria-valuemax="10">
-                                            <strong class="progress-title">French</strong>
-                                            <span class="progress-bar">
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet fill"></span>
-                                                <span class="bullet"></span>
-                                                <span class="bullet"></span>
-                                                <span class="bullet"></span>
-                                            </span>
-                                            <span class="progress-text text-muted">begginer</span>
-                                        </div>
                                     </div>
                                     <!-- .col-sm-6 -->
                                 </div>
@@ -256,46 +260,24 @@
                                             <span>Jan <strong class="text-upper">2025</strong> - Mar
                                                 <strong>2025 </strong></span>
                                         </time>
-                                        <h3>Full Stack Developer</h3>
-                                        <div class="education-logo">
-                                            <img src="assets/images/uploads/experience/logo-audio-jungle.png" alt="">
-                                        </div>
-                                        <span class="education-company">IBBA Group</span>
-                                        <p>Your brand is the core of your marketing, the central theme around your
-                                            products and services. Your brand is not your Logo or your Company Name
+                                        <h3>Full Stack Developer</h3>                                      
+                                        <p>Thực hiện dự án xây dựng website thương mại điện tử bán hàng trực tuyến,
+                                            bao gồm phát triển giao diện người dùng, tích hợp hệ thống thanh toán và
+                                            quản lý kho hàng.
                                         </p>
                                     </div>
                                     <!-- .education-box -->
 
                                     <div class="education-box">
                                         <time class="education-date" datetime="2014-01T2016-03">
-                                            <span>Jan <strong class="text-upper">2025 </strong> - Mar
+                                            <span>Jan <strong class="text-upper">2025 </strong> - Oct
                                                 <strong>2025</strong></span>
                                         </time>
-                                        <h3>Systems Analyst / Web Developer</h3>
-                                        <div class="education-logo">
-                                            <img src="assets/images/uploads/experience/logo-themeforest.png" alt="">
-                                        </div>
-                                        <span class="education-company">Loft Studio</span>
+                                        <h3>Dạy Gia Sư</h3>
                                         <p>
-                                            Your brand is the core of your marketing, the central theme around your
-                                            products and services.
+                                            Ôn thi cho học sinh thi vào đại học.
+                                            Dạy tin học văn phòng cho sinh viên thi chứng chỉ tin học A, B.
                                         </p>
-                                    </div>
-                                    <!-- .education-box -->
-
-                                    <div class="education-box">
-                                        <time class="education-date" datetime="2014-01T2016-03">
-                                            <span>Jan <strong class="text-upper">2025 </strong> - Mar
-                                                <strong>2025</strong></span>
-                                        </time>
-                                        <h3>Full Stack Developer</h3>
-                                        <div class="education-logo">
-                                            <img src="assets/images/uploads/experience/logo-envato.png" alt="">
-                                        </div>
-                                        <span class="education-company">Stu Unger Rise</span>
-                                        <p>Your brand is the core of your marketing, the central theme around your
-                                            products and services.</p>
                                     </div>
                                     <!-- .education-box -->
 
@@ -346,6 +328,33 @@
 
     <script type="text/javascript" src="assets/js/plugins.min.js"></script>
     <script type="text/javascript" src="assets/js/theme.min.js"></script>
+    <script>
+        (function(){
+            var btn = document.getElementById('contactToggle');
+            var menu = document.getElementById('contactMenu');
+            function toggle(e){
+                var shown = menu.classList.toggle('show');
+                btn.setAttribute('aria-expanded', shown);
+                menu.setAttribute('aria-hidden', !shown);
+            }
+            btn && btn.addEventListener('click', function(e){
+                e.stopPropagation(); toggle();
+            });
+            // close when clicking outside
+            document.addEventListener('click', function(e){
+                if(!menu) return;
+                if(menu.classList.contains('show')){
+                    var p = e.target;
+                    if(p===menu || menu.contains(p) || p===btn) return;
+                    menu.classList.remove('show');
+                    btn.setAttribute('aria-expanded','false');
+                    menu.setAttribute('aria-hidden','true');
+                }
+            });
+            // close with Escape
+            document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ if(menu&&menu.classList.contains('show')){menu.classList.remove('show'); btn.setAttribute('aria-expanded','false'); menu.setAttribute('aria-hidden','true');}}});
+        })();
+    </script>
 </body>
 
 <!-- Mirrored from certy.px-lab.com/html/demo1/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Mar 2025 18:58:42 GMT -->
